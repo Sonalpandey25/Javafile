@@ -1,0 +1,29 @@
+public class ReverseMe {
+
+	public static void main(String[] args) {
+  
+		Scanner sc = new Scanner(System.in);
+       
+		System.out.println("Enter the Line :");	
+		String[] words = sc.nextLine().split(" ");
+         
+        String reverseString = "";
+         
+        for (int i = 0; i < words.length; i++) 
+        {
+            String word = words[i];             
+           // String reverseWord = "";
+           
+            StringBuilder reverseWord = new StringBuilder();
+            for (int j = word.length()-1; j >= 0; j--) 
+            {
+               // reverseWord = reverseWord + word.charAt(j);
+            	reverseWord.append(word.charAt(j));   
+            }             
+            reverseString = reverseString + reverseWord + " ";
+        } 
+        System.out.println("Reverse line is :-" +"\r"+ reverseString);
+         
+        System.out.println("-------------------------");
+    }	
+}
